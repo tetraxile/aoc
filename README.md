@@ -1,2 +1,2 @@
 # aoc
-my solutions for advent of code (bad)
+my solutions for advent of code
