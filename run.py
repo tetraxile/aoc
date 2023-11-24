@@ -12,7 +12,10 @@ def main():
     
     try:
         day_module = importlib.import_module(f"{args.year}.{args.day}")
-    except ModuleNotFoundError:
+    except ModuleNotFoundError as e:
+        if e.name != f"{args.year}.{args.day}":
+            raise
+
         print(f"couldn't find {args.year}/{args.day}.py", file=sys.stderr)
         sys.exit(1)
 
