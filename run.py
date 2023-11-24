@@ -13,7 +13,7 @@ def main():
     try:
         day_module = importlib.import_module(f"{args.year}.{args.day}")
     except ModuleNotFoundError:
-        print("", file=sys.stderr)
+        print(f"couldn't find {args.year}/{args.day}.py", file=sys.stderr)
         sys.exit(1)
 
     file_path = "example" if args.example else f"input/{args.year}-{args.day}"
