@@ -61,7 +61,7 @@ def main():
             print(f"rate limit exceeded; wait {time_to_wait} seconds", file=sys.stderr)
             sys.exit(1)
     
-    responded, puzzle_input = get_input(year, day, session_token)
+    responded, puzzle_input = get_input(args.year, args.day, session_token)
     # responded, puzzle_input = False, "hi"
 
     with open(input_file, "w") as f:
