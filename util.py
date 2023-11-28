@@ -64,6 +64,5 @@ class Vec3:
         return Vec3(
                 self.y * other.z - self.z * other.y,
                 self.z * other.x - self.x * other.z,
-                self.x * other.y - other.y * self.x
+                self.x * other.y - self.y * other.x
         )
-
