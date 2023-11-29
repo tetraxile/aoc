@@ -179,4 +179,7 @@ def parse_string(tokens: list[tuple[bool, str]], string: str) -> list[str | int]
 
             string_idx += len(token)
 
+    if string_idx != len(string) - 1:
+        raise ValueError("didn't parse entire input string")
+
     return parts
