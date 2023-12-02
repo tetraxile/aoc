@@ -1,5 +1,8 @@
-import math
+from functools import reduce
+from math import *
+import operator
 import sys
+
 
 class Vec2:
     def __init__(self, x: int, y: int):
@@ -183,3 +186,7 @@ def parse_string(tokens: list[tuple[bool, str]], string: str) -> list[str | int]
         raise ValueError("didn't parse entire input string")
 
     return parts
+
+
+def product(it) -> int | float:
+    return reduce(operator.mul, it, 1)
