@@ -190,3 +190,7 @@ def parse_string(tokens: list[tuple[bool, str]], string: str) -> list[str | int]
 
 def product(it) -> int | float:
     return reduce(operator.mul, it, 1)
+
+
+def adjacents(r: int, c: int) -> list[tuple[int, int]]:
+    return [(r-1, c-1), (r-1, c), (r-1, c+1), (r, c+1), (r+1, c+1), (r+1, c), (r+1, c-1), (r, c-1)]
